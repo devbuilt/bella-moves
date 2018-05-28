@@ -6,7 +6,7 @@ var logger = require('morgan');
 var compression = require('compression');
 
 var mainRouter = require('./routes/main');
-var usersRouter = require('./routes/users');
+var postRouter = require('./routes/post');
 var aboutUs = require('./routes/about-us');
 var contact = require('./routes/contact');
 
@@ -25,8 +25,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRouter);
-app.use('/users', usersRouter);
-app.use('/aboutUs', aboutUs);
+app.use('/post', postRouter);
+app.use('/about-us', aboutUs);
 app.use('/contact', contact);
 
 // catch 404 and forward to error handler
