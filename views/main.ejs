@@ -73,15 +73,14 @@
                                     <a href="#" class="post-tag">Sports</a>
                                     <h4><a href="https://medium.com/mydfs/the-pleasures-and-sorrows-of-fantasy-sports-4151c232ab79"  target="_blank" class="post-headline">Fantasy sports it’s where elves play soccer or what?</a></h4>
                                     <p>Tracing it roots back to 1980, fantasy sports is the arena in which die-hard sports fans prove themselves as the die-hardest.</p>
-                                    <div class="post-meta">
-                                        <p>By <a href="#"><%= author %></a></p>
-                                        <p>3 comments</p>
+                                        <div class="post-meta">
+                                        <p>By <a href="https://twitter.com/devbuilt"  target="_blank"><%= author %></a></p>
+                                        <p>Posted <script>document.write(moment().startOf('hour').fromNow());</script> </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Single Blog Area  -->
                     <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1000ms">
                         <div class="row align-items-center">
@@ -102,7 +101,7 @@
                                     <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
                                     <div class="post-meta">
                                         <p>By <a href="#"><%= author %></a></p>
-                                        <p>3 comments</p>
+                                        <p><script>document.write(new Date().getFullYear());</script></p>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +297,7 @@
                         </div>
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
+                        <!-- <div class="sidebar-widget-area">
                             <h5 class="title">Tags</h5>
                             <div class="widget-content">
                                 <ul class="tags">
@@ -312,13 +311,12 @@
                                     <li><a href="#">adventure</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <% include ../partials/instagramfeed %>
     <% include ../partials/footer %>
     <% include ../partials/js %>
   </body>

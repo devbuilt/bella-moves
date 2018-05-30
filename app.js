@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var compression = require('compression');
+var _ = require('lodash');
+var timeago = require("timeago.js");
+var moment = require('moment');
+
 
 var mainRouter = require('./routes/main');
 var postRouter = require('./routes/post');
@@ -22,6 +26,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRouter);
